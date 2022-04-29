@@ -1,38 +1,19 @@
 import "./App.css";
 
-import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
-
-import AboutPage from "./AboutPage";
-import HomePage from "./HomePage";
-import logo from "./logo.svg";
+import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Router>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-          </nav>
+    <div>
+      <ButtonComponent type="button" cssClass="btn btn-primary">
+        Syncfusion Button
+      </ButtonComponent>
+      <br />
+      <br />
 
-          <Switch>
-            <Route path="/about">
-              <AboutPage />
-            </Route>
-            <Route path="/">
-              <HomePage />
-            </Route>
-          </Switch>
-        </Router>
-      </header>
+      <button type="button" className="btn btn-primary">
+        Theme button
+      </button>
     </div>
   );
 }
