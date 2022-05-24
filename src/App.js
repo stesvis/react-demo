@@ -1,20 +1,19 @@
 import "./App.css";
 
-import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
+import { Col, Form, Row } from "react-bootstrap";
+
+import AppDatePicker from "./components/DatePicker";
 
 function App() {
   return (
-    <div>
-      <ButtonComponent type="button" cssClass="btn btn-primary">
-        Syncfusion Button
-      </ButtonComponent>
-      <br />
-      <br />
-
-      <button type="button" className="btn btn-primary">
-        Theme button
-      </button>
-    </div>
+    <Row className="mt-2 mb-2">
+      <Col sm={3}>
+        <Form.Control className="mb-2" />
+      </Col>
+      <Col sm={3}>
+        <AppDatePicker />
+      </Col>
+    </Row>
   );
 }
 
