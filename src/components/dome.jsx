@@ -1,15 +1,21 @@
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import React, { useState } from "react";
 import styled from 'styled-components';
-import './DatePicker.css'
+// import './DatePicker.css'
 
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { TextField } from "@mui/material";
 
-const AppDatePicker = ({ name, placeholder, value, ajkjk, ...otherProps }) => {
+const AppDatePickers = ({ name, placeholder, value, ajkjk, ...otherProps }) => {
   const [date, setDate] = useState(value);
 
 
+
+  const color = {
+    paddingRight: "8px",
+    fontSize: "30px",
+    color: "#eeeeee"
+  }
 
 
   return (
@@ -32,7 +38,9 @@ const AppDatePicker = ({ name, placeholder, value, ajkjk, ...otherProps }) => {
 
                     variant="standard"
                     inputProps={{ className: "form-control" }}
-                    
+                    sx={{
+                      svg: color,
+                    }}
                   />
 
                 </>
@@ -63,4 +71,4 @@ const AppDatePicker = ({ name, placeholder, value, ajkjk, ...otherProps }) => {
   );
 };
 
-export default AppDatePicker;
+export default AppDatePickers;
