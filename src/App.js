@@ -4,7 +4,6 @@ import { Col, Form, Row } from "react-bootstrap";
 
 import AppDatePicker from "./components/DatePicker";
 import AppDatePickers from "./components/dome";
-import { css } from "@emotion/react";
 
 function App() {
   return (
@@ -12,8 +11,8 @@ function App() {
       <Col sm={3}>
         <Form.Control className="mb-2" />
       </Col>
-      <Col className="d-flex " sm={6}>
-        <AppDatePickers/>
+      <Col sm={3}>{/* <AppDatePickers /> */}</Col>
+      <Col sm={3}>
         <AppDatePicker />
       </Col>
     </Row>
