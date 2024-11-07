@@ -6,5 +6,5 @@ services:
       context: .
       dockerfile: Dockerfile.staging
     ports:
-      - "3500:3500"
-      - "3501:3501"
+      - "3500:80"
+      - "3501:443"
