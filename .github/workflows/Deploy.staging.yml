@@ -33,6 +33,10 @@ jobs:
           file: Dockerfile.staging
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/metagolf.demo.staging:latest
+          build-args: |
+            PACKAGES_TOKEN_GITHUB=${{ secrets.PACKAGES_TOKEN_GITHUB }}
+          secrets: |
+            github_token=${{ secrets.PACKAGES_TOKEN_GITHUB }}
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.5.3
