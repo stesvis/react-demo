@@ -1,0 +1,8 @@
+services:
+  metagolf.demo:
+    build:
+      context: .
+      dockerfile: Dockerfile.staging
+    ports:
+      - "3500:80"
+      - "3501:443"

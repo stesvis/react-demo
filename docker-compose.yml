@@ -1,0 +1,12 @@
+services:
+  metagolf.demo:
+    image: ${DOCKER_REGISTRY-}metagolf.demo
+    container_name: metagolf.demo
+    restart: unless-stopped
+    volumes:
+      - /var/lib/metagolf-demo/logs:/app/logs
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NODE_ENV=production
