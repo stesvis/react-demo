@@ -1,8 +1,10 @@
 services:
   metagolf.demo:
+    image: ${DOCKER_REGISTRY-}metagolf.demo.staging
+    container_name: metagolf.demo.staging
     build:
       context: .
       dockerfile: Dockerfile.staging
     ports:
-      - "3500:80"
-      - "3501:443"
+      - "3500:3500"
+      - "3501:3501"
