@@ -1,4 +1,3 @@
-import { jsonLog } from "@stesvis/react-module-demo";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import logo from "./logo.svg";
@@ -7,8 +6,6 @@ import { AboutPage } from "./pages/AboutPage";
 import { HomePage } from "./pages/HomePage";
 
 function App() {
-  jsonLog("test", { test: "test" });
-
   return (
     <Router>
       <div className="App">
